@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="rz_tutorial.builder.orm_form" class="Rz\TutorialBundle\Builder\FormContractor">
+            <argument type="service" id="form.factory" />
+        </service>
+
+        <service id="rz_tutorial.admin.tutorial" class="%rz_tutorial.admin.tutorial.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 group="rz_tutorial"
+                 label="Tutorial"
+                 label_catalogue="%rz_tutorial.admin.tutorial.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore"/>
+            <argument />
+            <argument>%rz_tutorial.admin.tutorial.entity%</argument>
+            <argument>%rz_tutorial.admin.tutorial.controller%</argument>
+
+            <call method="addChild">
+                <argument type="service" id="rz_tutorial.admin.tutorial_item" />
+            </call>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.tutorial.translation_domain%</argument>
+            </call>
+
+        </service>
+
+        <service id="rz_tutorial.admin.tutorial_item" class="%rz_tutorial.admin.tutorial_item.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 group="rz_tutorial"
+                 label="Screens"
+                 label_catalogue="%rz_tutorial.admin.tutorial.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore"
+                 form_contractor="rz_tutorial.builder.orm_form"/>
+            <argument />
+            <argument>%rz_tutorial.admin.tutorial_item.entity%</argument>
+            <argument>%rz_tutorial.admin.tutorial_item.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.tutorial_item.translation_domain%</argument>
+            </call>
+
+        </service>
+
+        <service id="rz_tutorial.admin.tutorial_has_item" class="%rz_tutorial.admin.tutorial_has_item.class%">
+            <tag name="sonata.admin" manager_type="orm" show_in_dashboard="false" group="rz_tutorial" label="Tutorial Has Items"  label_catalogue="%rz_tutorial.admin.tutorial.translation_domain%" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz_tutorial.admin.tutorial_has_item.entity%</argument>
+            <argument>%rz_tutorial.admin.tutorial_has_item.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.tutorial_has_item.translation_domain%</argument>
+            </call>
+
+        </service>
+    </services>
+
+</container>

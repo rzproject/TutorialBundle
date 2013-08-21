@@ -1,0 +1,5 @@
+table.tutorial-media-collection  tbody tr td input,
+table.tutorial-media-collection  tbody tr td div.sonata-actions > div.btn-group{
+    margin-bottom: 0px !important;
+}
+

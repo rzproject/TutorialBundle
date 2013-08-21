@@ -1,0 +1,32 @@
+<tr id="{{ parentId }}_coordinates_{{ uniqid }}_tr">
+    <td>
+        <input type="text" id="{{ parentId }}_coordinates_{{ uniqid }}_x1" name="{{ parentId }}[coordinates][{{ uniqid }}][x1]" required="required" value="{{ x1 }}" readonly style="width:50px">
+    </td>
+    <td>
+        <input type="text" id="{{ parentId }}_coordinates_{{ uniqid }}_y1" name="{{ parentId }}[coordinates][{{ uniqid }}][y1]" required="required" value="{{ y1 }}" readonly  style="width:50px">
+    </td>
+    <td>
+        <input type="text" id="{{ parentId }}_coordinates_{{ uniqid }}_x2" name="{{ parentId }}[coordinates][{{ uniqid }}][x2]" required="required" value="{{ x2 }}" readonly  style="width:50px">
+    </td>
+    <td>
+        <input type="text" id="{{ parentId }}_coordinates_{{ uniqid }}_y2" name="{{ parentId }}[coordinates][{{ uniqid }}][y2]" required="required" value="{{ y2 }}" readonly style="width:50px">
+    </td>
+    <td>
+        <div class="sonata-actions" style="width:110px">
+            <select id="{{ parentId }}_coordinates_{{ uniqid }}_type"
+                    class="span12 selectpicker"
+                    title="Choose one of the following..."
+                    data-size="2"
+                    name="{{ parentId }}[coordinates][{{ uniqid }}][type]">
+                <option {% if type == 'click' %}selected{% endif %} value="click">click</option>
+                <option {% if type == 'input' %}selected{% endif %} value="input">input</option>
+            </select>
+        </div>
+    </td>
+    <td>
+        <div class="sonata-actions btn-group">
+            <a href="#" media-record="{{ parentId }}_coordinates_{{ uniqid }}" class="btn sonata-action-element tutorial-media-edit-coordinates"><i class="icon-edit"></i></a>
+            <a href="#" media-record="{{ parentId }}_coordinates_{{ uniqid }}" class="btn sonata-action-element tutorial-media-remove-coordinates"><i class="micon-remove"></i></a>
+        </div>
+    </td>
+</tr>

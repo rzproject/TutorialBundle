@@ -1,0 +1,16 @@
+{% extends 'RzAdminBundle:CRUD:base_edit.html.twig' %}
+
+{% block sonata_stylesheet_block %}
+    {{ parent() }}
+    {# jcrop #}
+    <link href="{{ asset('bundles/rmzamorajquery/jquery-plugins/jcrop/css/jquery.Jcrop.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('bundles/rztutorial/css/rz_tutorial.css') }}" rel="stylesheet"/>
+
+{% endblock sonata_stylesheet_block %}
+
+{% block sonata_javascript_block %}
+    {{ parent() }}
+    {# jcrop #}
+    <script src="{{ asset('bundles/rmzamorajquery/jquery-plugins/jcrop/js/jquery.color.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/rmzamorajquery/jquery-plugins/jcrop/js/jquery.Jcrop.min.js') }}" type="text/javascript"></script>
+{% endblock sonata_javascript_block %}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="rz_tutorial.form.type.tutorial_screenshot" class="Rz\TutorialBundle\Form\Type\TutorialScreenshotType">
+            <argument type="service" id="sonata.media.admin.media.manager" />
+            <argument>%sonata.media.media.class%</argument>
+            <tag name="form.type" alias="rz_type_tutorial_screenshot" />
+        </service>
+    </services>
+</container>
