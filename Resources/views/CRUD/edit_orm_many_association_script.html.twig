@@ -243,6 +243,12 @@ var field_dialog_form_action_{{ id }} = function(event) {
     event.preventDefault();
     event.stopPropagation();
 
+    for ( instance in CKEDITOR.instances ) {
+        console.log('ck-here');
+        CKEDITOR.instances[instance].updateElement();
+    }
+
+
     jQuery.blockUI({ message: Admin.loadingMessage(null)});
 
     Admin.log('[{{ id }}|field_dialog_form_action] action catch', this);
@@ -481,8 +487,10 @@ var jcrop_current_active_edit_{{ id }} = null;
 function init_jcrop_{{ id }}(coords) {
     remove_jcrop_{{ id }}();
     if (jQuery('img', jQuery('#field_widget_{{ id }}')).length ) {
-        console.log('init jcrop');
+        console.log('call to init_jcrop_{{ id }}');
+        var jcrop_image = jQuery('img', jQuery('#field_widget_{{ id }}'));
         jQuery('img', jQuery('#field_widget_{{ id }}')).Jcrop({
+            trueSize: [jcrop_image.width(),jcrop_image.height()],
             setSelect:  coords,
             onChange: jcrop_showCoords_{{ id }},
             onSelect: jcrop_select_{{ id }}

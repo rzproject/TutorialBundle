@@ -1,0 +1,28 @@
+rz_tutorial: Tutorials
+breadcrumb:
+  link_category_list: Tutorial Category
+list:
+  label_name: Name
+  label_slug: Slug
+  label_enabled: Enabled
+
+form:
+  label_description: Description
+  label_name: Name
+  label_slug: Slug
+  label_enabled: Enabled
+  label_parent: Parent Category
+
+show:
+  label_description: Description
+  label_name: Name
+  label_slug: Slug
+  label_enabled: Enabled
+  label_parent: Parent Category
+
+filter:
+  label_description: Description
+  label_name: Name
+  label_slug: Slug
+  label_enabled: Enabled
+  label_parent: Parent Category

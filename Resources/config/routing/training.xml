@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="rz_tutorial_list_training" pattern="/">
+        <default key="_controller">RzTutorialBundle:Training:list</default>
+    </route>
+
+    <route id="rz_tutorial_list_training_pager" pattern="/{page}">
+        <default key="_controller">RzTutorialBundle:Training:listPage</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+
+    <route id="rz_tutorial_list_training_tutorials" pattern="/{slug}/tutorials">
+        <default key="_controller">RzTutorialBundle:Training:listTutorials</default>
+    </route>
+
+    <route id="rz_tutorial_training_tutorial" pattern="/{slug}/tutorial/{tutorialSlug}">
+        <default key="_controller">RzTutorialBundle:Training:viewTutorial</default>
+    </route>
+
+    <route id="rz_tutorial_training_tutorial_summary" pattern="/{slug}/tutorial/{tutorialSlug}/summary">
+        <default key="_controller">RzTutorialBundle:Training:summaryTutorial</default>
+    </route>
+</routes>

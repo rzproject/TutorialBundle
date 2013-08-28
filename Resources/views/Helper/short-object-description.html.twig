@@ -1,7 +1,7 @@
 {% if admin.hasRoute('edit') and admin.isGranted('EDIT') %}
     <div class="row-fluid sepH_c">
         <div class="span12">
-            <img id="{{ admin.form.name }}_media_screen_image" src="{% path object, 'reference' %}" class="tutorial-screen-image">
+            <img id="{{ admin.form.name }}_media_screen_image" src="{% path object, 'reference' %}" class="tutorial-screen-image" style="width: {{ object.width }}px; height: {{ object.height }}px">
         </div>
     </div>
 

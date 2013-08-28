@@ -11,7 +11,7 @@ use Rz\TutorialBundle\Model\Tutorial as ModelTutorial;
 class Tutorial extends ModelTutorial
 {
     public function __toString() {
-        return $this->getDescription() ?: 'n/a';
+        return $this->getTitle() ?: 'n/a';
     }
 
     public function prePersist()

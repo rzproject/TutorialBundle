@@ -9,6 +9,27 @@
             <argument type="service" id="form.factory" />
         </service>
 
+        <service id="rz_tutorial.admin.training" class="%rz_tutorial.admin.training.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 group="rz_tutorial_training"
+                 label="Training"
+                 label_catalogue="%rz_tutorial.admin.training.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore"/>
+            <argument />
+            <argument>%rz_tutorial.admin.training.entity%</argument>
+            <argument>%rz_tutorial.admin.training.controller%</argument>
+
+            <!--<call method="addChild">-->
+                <!--<argument type="service" id="rz_tutorial.admin.tutorial_item" />-->
+            <!--</call>-->
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.training.translation_domain%</argument>
+            </call>
+
+        </service>
+
         <service id="rz_tutorial.admin.tutorial" class="%rz_tutorial.admin.tutorial.class%">
             <tag name="sonata.admin"
                  manager_type="orm"
@@ -34,8 +55,8 @@
             <tag name="sonata.admin"
                  manager_type="orm"
                  group="rz_tutorial"
-                 label="Screens"
-                 label_catalogue="%rz_tutorial.admin.tutorial.translation_domain%"
+                 label="breadcrumb.link_tutorial_item_list"
+                 label_catalogue="%rz_tutorial.admin.tutorial_item.translation_domain%"
                  label_translator_strategy="sonata.admin.label.strategy.underscore"
                  form_contractor="rz_tutorial.builder.orm_form"/>
             <argument />
@@ -49,13 +70,92 @@
         </service>
 
         <service id="rz_tutorial.admin.tutorial_has_item" class="%rz_tutorial.admin.tutorial_has_item.class%">
-            <tag name="sonata.admin" manager_type="orm" show_in_dashboard="false" group="rz_tutorial" label="Tutorial Has Items"  label_catalogue="%rz_tutorial.admin.tutorial.translation_domain%" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 show_in_dashboard="false"
+                 group="rz_tutorial"
+                 label="Tutorial Has Items"
+                 label_catalogue="%rz_tutorial.admin.tutorial_has_item.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore" />
             <argument />
             <argument>%rz_tutorial.admin.tutorial_has_item.entity%</argument>
             <argument>%rz_tutorial.admin.tutorial_has_item.controller%</argument>
 
             <call method="setTranslationDomain">
                 <argument>%rz_tutorial.admin.tutorial_has_item.translation_domain%</argument>
+            </call>
+
+        </service>
+
+        <service id="rz_tutorial.admin.training_has_tutorial" class="%rz_tutorial.admin.training_has_tutorial.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 show_in_dashboard="false"
+                 group="rz_tutorial_training"
+                 label="Tutorial Has Items"
+                 label_catalogue="%rz_tutorial.admin.tutorial_has_item.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz_tutorial.admin.training_has_tutorial.entity%</argument>
+            <argument>%rz_tutorial.admin.training_has_tutorial.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.training_has_tutorial.translation_domain%</argument>
+            </call>
+
+        </service>
+
+        <service id="rz_tutorial.admin.user_has_training" class="%rz_tutorial.admin.user_has_training.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 show_in_dashboard="false"
+                 group="rz_tutorial_training"
+                 label="User Has Training"
+                 label_catalogue="%rz_tutorial.admin.user_has_training.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz_tutorial.admin.user_has_training.entity%</argument>
+            <argument>%rz_tutorial.admin.user_has_training.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.user_has_training.translation_domain%</argument>
+            </call>
+
+        </service>
+
+
+        <service id="rz_tutorial.admin.training_user_progress" class="%rz_tutorial.admin.training_user_progress.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 show_in_dashboard="true"
+                 group="rz_tutorial_progress"
+                 label="Training User Progress"
+                 label_catalogue="%rz_tutorial.admin.training_user_progress.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz_tutorial.admin.training_user_progress.entity%</argument>
+            <argument>%rz_tutorial.admin.training_user_progress.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.training_user_progress.translation_domain%</argument>
+            </call>
+
+        </service>
+
+        <service id="rz_tutorial.admin.tutorial_user_progress" class="%rz_tutorial.admin.tutorial_user_progress.class%">
+            <tag name="sonata.admin"
+                 manager_type="orm"
+                 show_in_dashboard="true"
+                 group="rz_tutorial_progress"
+                 label="Tutorial User Progress"
+                 label_catalogue="%rz_tutorial.admin.tutorial_user_progress.translation_domain%"
+                 label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz_tutorial.admin.tutorial_user_progress.entity%</argument>
+            <argument>%rz_tutorial.admin.tutorial_user_progress.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz_tutorial.admin.tutorial_user_progress.translation_domain%</argument>
             </call>
 
         </service>

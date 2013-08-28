@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="rz_tutorial.manager.tutorial.class">Rz\TutorialBundle\Entity\TutorialManager</parameter>
+        <parameter key="rz_tutorial.manager.training.class">Rz\TutorialBundle\Entity\TrainingManager</parameter>
+        <parameter key="rz_tutorial.manager.tutorial_item.class">Rz\TutorialBundle\Entity\TutorialItemManager</parameter>
+        <parameter key="rz_tutorial.manager.category.class">Rz\TutorialBundle\Entity\CategoryManager</parameter>
+        <parameter key="rz_tutorial.manager.user_has_training.class">Rz\TutorialBundle\Entity\UserHasTrainingManager</parameter>
+        <parameter key="rz_tutorial.manager.training_user_progress.class">Rz\TutorialBundle\Entity\TrainingUserProgressManager</parameter>
+        <parameter key="rz_tutorial.manager.tutorial_user_progress.class">Rz\TutorialBundle\Entity\TutorialUserProgressManager</parameter>
+
+    </parameters>
+
+    <services>
+        <service id="rz_tutorial.entity_manager" alias="doctrine.orm.default_entity_manager" />
+
+        <service id="rz_tutorial.manager.tutorial" class="%rz_tutorial.manager.tutorial.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.tutorial.entity%</argument>
+        </service>
+
+        <service id="rz_tutorial.manager.training" class="%rz_tutorial.manager.training.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.training.entity%</argument>
+        </service>
+
+        <service id="rz_tutorial.manager.tutorial_item" class="%rz_tutorial.manager.tutorial_item.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.tutorial_item.entity%</argument>
+        </service>
+
+        <service id="rz_tutorial.manager.user_has_training" class="%rz_tutorial.manager.user_has_training.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.user_has_training.entity%</argument>
+        </service>
+
+        <service id="rz_tutorial.manager.training_user_progress" class="%rz_tutorial.manager.training_user_progress.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.training_user_progress.entity%</argument>
+        </service>
+
+        <service id="rz_tutorial.manager.tutorial_user_progress" class="%rz_tutorial.manager.tutorial_user_progress.class%">
+            <argument type="service" id="rz_tutorial.entity_manager" />
+            <argument>%rz_tutorial.manager.tutorial_user_progress.entity%</argument>
+        </service>
+
+    </services>
+
+</container>

@@ -16,10 +16,11 @@
             <select id="{{ parentId }}_coordinates_{{ uniqid }}_type"
                     class="span12 selectpicker"
                     title="Choose one of the following..."
-                    data-size="2"
+                    data-size="3"
                     name="{{ parentId }}[coordinates][{{ uniqid }}][type]">
                 <option {% if type == 'click' %}selected{% endif %} value="click">click</option>
                 <option {% if type == 'input' %}selected{% endif %} value="input">input</option>
+                <option {% if type == 'dblclick' %}selected{% endif %} value="dblclick">Double Click</option>
             </select>
         </div>
     </td>

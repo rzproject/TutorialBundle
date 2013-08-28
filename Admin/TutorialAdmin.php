@@ -33,7 +33,7 @@ class TutorialAdmin extends Admin
     {
         $listMapper
         ->addIdentifier('title', null, array('footable'=>array('attr'=>array('data_toggle'=>true))))
-        ->add('description')
+        ->add('enabled', null, array('editable' => true, 'footable'=>array('attr'=>array('data_hide'=>'phone'))))
         ;
     }
 
@@ -45,23 +45,24 @@ class TutorialAdmin extends Admin
         $formMapper
             ->with('Tutorial')
                 ->add('title', null, array('required' => true))
-                ->add('description', null, array('required' => true))
-                ->add('content', null, array('required' => true))
+                ->add('description', 'rz_ckeditor', array('required' => false))
+            ->end()
+            ->with('Details')
+                ->add('content', 'rz_ckeditor', array('required' => false))
             ->end()
             ->with('Steps')
-            ->add('tutorialHasItems', 'sonata_type_collection', array(
-                                        'cascade_validation' => true,
-                                        //'attr' => array('class'=>'span6'),
-                                    ), array(
-                      'edit' => 'inline',
-                      'inline' => 'table',
-                      //'inline' => 'standard',
-                      'sortable'  => 'position',
-                      'admin_code' => 'rz_tutorial.admin.tutorial_has_item'
-                  )
-                )
+                ->add('tutorialHasItems', 'sonata_type_collection', array(
+                                            'cascade_validation' => true,
+                                            //'attr' => array('class'=>'span6'),
+                                        ), array(
+                          'edit' => 'inline',
+                          'inline' => 'table',
+                          //'inline' => 'standard',
+                          'sortable'  => 'position',
+                          'admin_code' => 'rz_tutorial.admin.tutorial_has_item'
+                      )
+                    )
             ->end()
-
         ;
 
 

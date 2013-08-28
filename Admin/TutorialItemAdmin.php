@@ -31,7 +31,6 @@ class TutorialItemAdmin extends Admin
     {
         $listMapper
         ->addIdentifier('title', null, array('footable'=>array('attr'=>array('data_toggle'=>true))))
-        ->add('description')
         ;
     }
 
@@ -48,39 +47,20 @@ class TutorialItemAdmin extends Admin
         $formMapper
             ->with('Details')
                 ->add('title', null, array('required' => true))
-                ->add('description', null, array('required' => true))
+                ->add('description', 'rz_ckeditor', array('required' => false))
             ->end()
             ->with('Text Content')
-                ->add('content', null, array('required' => false))
+                ->add('content', 'rz_ckeditor', array('required' => false))
             ->end()
             ->with('Image')
                 ->add('coordinates', 'hidden', array('required' => false, 'mapped'=>false))
                 ->add('media', 'rz_type_tutorial_screenshot',
                              array('required' => true,
                                    'link_coordinates'=> $coordinates ?: null,
-//                                   'x1'=> $coordinates ? $coordinates['x1']: null,
-//                                   'y1'=> $coordinates ? $coordinates['y1']: null,
-//                                   'x2'=> $coordinates ? $coordinates['x2']: null,
-//                                   'y2'=> $coordinates ? $coordinates['y2']: null,
-                                     //'reference_field' => 'tutorialImageMaps',
+                                   'attr'=>array('class'=>'span12')
                                   ),
-                             array('link_parameters' => array('context'=>'default', 'provider'=>'sonata.media.provider.image'))
+                             array('link_parameters' => array('context'=>'tutorial', 'provider'=>'sonata.media.provider.image'))
                      )
-//                ->add('tutorialImageMaps', 'rz_tutorial_image_maps_type_collection', array(
-//                                             'cascade_validation' => true,
-//                                             //'attr' => array('class'=>'span6'),
-//                                         ), array(
-//                          'edit' => 'inline',
-//                          //'inline' => 'table',
-//                          //'inline' => 'standard',
-//                          'sortable'  => 'position',
-//                          'admin_code' => 'rz_tutorial.admin.tutorial_image_maps'
-//                      )
-//                    )
-//                ->add('x1', 'hidden', array('required' => false, 'mapped'=>false, 'data'=> $coordinates ? $coordinates['x1']: null))
-//                ->add('y1', 'hidden', array('required' => false, 'mapped'=>false, 'data'=> $coordinates ? $coordinates['y1']: null))
-//                ->add('x2', 'hidden', array('required' => false, 'mapped'=>false, 'data'=> $coordinates ? $coordinates['x2']: null))
-//                ->add('y2', 'hidden', array('required' => false, 'mapped'=>false, 'data'=> $coordinates ? $coordinates['y2']: null))
             ->end()
         ;
     }

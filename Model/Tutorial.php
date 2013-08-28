@@ -10,10 +10,22 @@ class Tutorial implements TutorialInterface
     protected $description;
     protected $content;
     protected $slug;
-    protected $permalink;
     protected $tutorialHasItems;
+    protected $trainingHasTutorials;
+    protected $tutorialUserProgress;
     protected $createdAt;
     protected $updatedAt;
+    protected $enabled;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct()
+    {
+        $this->tutorialHasItems = new ArrayCollection();
+        $this->trainingHasTutorials = new ArrayCollection();
+        $this->tutorialUserProgress = new ArrayCollection();
+    }
 
     /**
      * {@inheritdoc}
@@ -54,7 +66,7 @@ class Tutorial implements TutorialInterface
      * {@inheritdoc}
      */
     public function setContent($content) {
-        $this->title = $content;
+        $this->content = $content;
     }
 
     /**
@@ -65,15 +77,8 @@ class Tutorial implements TutorialInterface
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function getPermalink() {
-        return $this->permalink;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
+ * {@inheritdoc}
+ */
     public function setTutorialHasItems($tutorialHasItems)
     {
         $this->tutorialHasItems = new ArrayCollection();
@@ -130,5 +135,76 @@ class Tutorial implements TutorialInterface
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setEnabled($enabled = false)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param mixed $trainingHasTutorials
+     */
+    public function setTrainingHasTutorials ($trainingHasTutorials)
+    {
+        $this->trainingHasTutorials = $trainingHasTutorials;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTrainingHasTutorials ()
+    {
+        return $this->trainingHasTutorials;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTutorialUserProgress($tutorialUserProgress)
+    {
+        $this->tutorialUserProgress = new ArrayCollection();
+
+        if($tutorialUserProgress) {
+            foreach (tutorialUserProgress as $tup) {
+                $this->addTutorialUserProgress($tup);
+            }
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTutorialUserProgress()
+    {
+        return $this->tutorialUserProgress;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function addTutorialUserProgress(TutorialUserProgressInterface $tutorialUserProgress)
+    {
+        $tutorialUserProgress->setTutorial($this);
+        $this->tutorialUserProgress[] = $tutorialUserProgress;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeTutorialUserProgress(TutorialUserProgressInterface $tutorialUserProgress)
+    {
+        $this->tutorialUserProgress->removeElement($tutorialUserProgress);
     }
 }

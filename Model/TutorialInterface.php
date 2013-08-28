@@ -18,6 +18,4 @@ interface TutorialInterface
     public function setContent($title);
 
     public function getSlug();
-
-    public function getPermalink();
 }

@@ -1,0 +1,25 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% if settings.title is defined %}
+    <h3 class="sonata-feed-title">{{ settings.title }}</h3>
+    {% endif %}
+    <ul>
+    {% for tutorial in settings.tutorials.getResults() %}
+        <li><a href="#">{{ tutorial.title }}</a></li>
+    {% endfor %}
+    </ul>
+    <div class="row-fluid">
+        <div class="span12">
+        {% if settings.tutorials.haveToPaginate() %}
+            {% if settings.tutorials.page != settings.tutorials.previouspage %}
+                <a href="#" title="{{ 'link_previous_page'|trans({}, 'RzTutorialBundle') }}">{{ 'link_previous_page'|trans({}, 'RzTutorialBundle') }}</a>
+            {% endif %}
+
+            {% if settings.tutorials.page != settings.tutorials.nextpage %}
+                <a href="#" title="{{ 'link_next_page'|trans({}, 'RzTutorialBundle') }}">{{ 'link_next_page'|trans({}, 'RzTutorialBundle') }}</a>
+            {% endif %}
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

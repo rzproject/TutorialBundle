@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                                      http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd
+                                      http://gediminasm.org/schemas/orm/doctrine-extensions-mapping
+                                      http://gediminasm.org/schemas/orm/doctrine-extensions-mapping.xsd">
+    <mapped-superclass name="Rz\TutorialBundle\Entity\Training">
+        <field name="title" column="title" type="string" length="255"/>
+        <field name="description" column="description" type="text" nullable="true" />
+        <field name="content" column="content" type="text" nullable="true" />
+        <field name="slug" column="slug" type="string" unique="true">
+            <gedmo:slug unique="true" style="default" updatable="true" separator="-" fields="title" />
+        </field>
+        <field name="isPublished"  type="boolean"  column="is_published" default="false" nullable="true" />
+        <field name="publishStart" column="publish_start" type="datetime" nullable="true"/>
+        <field name="publishEnd" column="publish_end" type="datetime" nullable="true"/>
+        <field name="createdAt" column="created_at" type="datetime"/>
+        <field name="updatedAt" column="updated_at" type="datetime"/>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="prePersist" method="prePersist"/>
+            <lifecycle-callback type="preUpdate" method="preUpdate"/>
+        </lifecycle-callbacks>
+    </mapped-superclass>
+</doctrine-mapping>

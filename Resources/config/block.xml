@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="rz_tutorial.block.tutorial_list.class">Rz\TutorialBundle\Block\TutorialListBlockService</parameter>
+        <parameter key="rz_tutorial.block.training_list.class">Rz\TutorialBundle\Block\TrainingListBlockService</parameter>
+        <!--<parameter key="rz_tutorial.block.tutorial_category_list.class">Rz\TutorialBundle\Block\TutorialCategoryListBlockService</parameter>-->
+    </parameters>
+
+    <services>
+        <service id="rz_tutorial.block.tutorial_list" class="%rz_tutorial.block.tutorial_list.class%">
+            <tag name="sonata.block" />
+            <argument>rz_tutorial.block.tutorial_list</argument>
+            <argument type="service" id="templating" />
+            <argument type="service" id="service_container" />
+            <argument type="service" id="rz_tutorial.manager.tutorial" />
+        </service>
+
+        <service id="rz_tutorial.block.training_list" class="%rz_tutorial.block.training_list.class%">
+            <tag name="sonata.block" />
+            <argument>rz_tutorial.block.training_list</argument>
+            <argument type="service" id="templating" />
+            <argument type="service" id="service_container" />
+            <argument type="service" id="rz_tutorial.manager.training" />
+        </service>
+
+        <!--<service id="rz_tutorial.block.tutorial_category_list" class="%rz_tutorial.block.tutorial_category_list.class%">-->
+            <!--<tag name="sonata.block" />-->
+            <!--<argument>rz_tutorial.block.tutorial_category_list</argument>-->
+            <!--<argument type="service" id="templating" />-->
+            <!--<argument type="service" id="service_container" />-->
+            <!--<argument type="service" id="rz_tutorial.manager.category" />-->
+            <!--<argument type="service" id="rz_tutorial.manager.tutorial" />-->
+        <!--</service>-->
+    </services>
+</container>

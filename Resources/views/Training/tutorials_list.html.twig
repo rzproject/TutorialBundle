@@ -1,0 +1,41 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h3>{{ training.title }}</h3>
+        {% if training.description is defined %}
+        <blockquote>
+            <small>{{ training.description | raw}}</small>
+        </blockquote>
+        {% endif %}
+        {% if training.content is defined %}
+            {{ training.content | raw}}
+        {% endif %}
+    </div>
+</div>
+{% if training.trainingHasTutorials is defined %}
+{% set trainingHasTutorials = training.trainingHasTutorials %}
+<div class="row-fluid">
+    <div class="span12 sepH_c">
+    <h4>Tutorials</h4>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+    <ol>
+        {% for trainingHasTutorial in trainingHasTutorials %}
+            <li><a href="{{ path('rz_tutorial_training_tutorial',
+                            {
+                                'slug': training.slug,
+                                'tutorialSlug': trainingHasTutorial.tutorial.slug,
+                            })
+                          }}">
+                    {{ trainingHasTutorial.tutorial.title }}</a>
+                {% if trainingHasTutorial.tutorial.description is defined %}
+                    <blockquote>
+                        <small>{{ trainingHasTutorial.tutorial.description | raw}}</small>
+                    </blockquote>
+                {% endif %}</li>
+        {% endfor %}
+    </ol>
+    </div>
+</div>
+{% endif %}

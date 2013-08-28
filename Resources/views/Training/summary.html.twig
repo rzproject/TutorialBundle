@@ -1,0 +1,22 @@
+{% if tutorial.title is defined %}
+    <div class="row-fluid lesson">
+        <div class="span12">
+            <h3>{{ tutorial.title }}</h3>
+            {% if tutorial.content is defined %}
+                <blockquote>
+                    <small>{{ tutorial.content | raw}}</small>
+                </blockquote>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+<div class="row-fluid">
+    <div class="span12">
+        <a href="{{ path('rz_tutorial_list_training_tutorials', {'slug': trainingSlug}) }}" class="btn btn-success"><i class="icon-share-alt"></i> Back to Tutorials</a>
+    </div>
+</div>
+
+
+
+

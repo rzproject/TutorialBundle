@@ -1,0 +1,33 @@
+rz_tutorial_progress: Tutorial Progress
+
+
+breadcrumb:
+  link_tutorial_user_progress_list: Tutorial User Progress
+
+list:
+  label_training_user_progress_training_title: Training
+  label_training_user_progress_user_username: User
+  label_tutorial_title: Tutorial
+  label_elapse_time: Elapse Time
+  label_accomplished: Is Session Finished
+  label_updated_at: Last Access Date
+  label__action: Action
+
+filter:
+  label_training_user_progress_training_title: Training
+  label_training_user_progress_user_username: User
+  label_tutorial_title: Tutorial
+  label_elapse_time: Elapse Time
+  label_accomplished: Is Session Finished
+  label_updated_at: Last Access Date
+
+show:
+  label_training_user_progress_training_title: Training
+  label_training_user_progress_user_username: User
+  label_tutorial: Tutorial
+  label_started: Start Date
+  label_ended: End Date
+  label_elapse_time: Elapse Time
+  label_accomplished: Is Session Finished
+  label_created_at: Created Date
+  label_updated_at: Last Access Date

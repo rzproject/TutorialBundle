@@ -52,30 +52,6 @@ interface TutorialHasItemInterface
      */
     public function getPosition();
 
-//    /**
-//     * @param \DateTime|null $updatedAt
-//     *
-//     * @return void
-//     */
-//    public function setUpdatedAt(\DateTime $updatedAt = null);
-//
-//    /**
-//     * @return \DateTime
-//     */
-//    public function getUpdatedAt();
-//
-//    /**
-//     * @param \DateTime|null $createdAt
-//     *
-//     * @return void
-//     */
-//    public function setCreatedAt(\DateTime $createdAt = null);
-//
-//    /**
-//     * @return void
-//     */
-//    public function getCreatedAt();
-
     /**
      * @return void
      */

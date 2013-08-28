@@ -1,0 +1,24 @@
+rz_tutorial: Tutorials
+rz_tutorial_training: Trainings
+
+list:
+  label_title: Tutorial Title
+  label_select: Actions
+
+breadcrumb:
+  link_tutorial_item_list: Tutorial Item (Sreens)
+
+form:
+  label_title: Title
+  label_description: Description
+  label_media: Image
+
+show:
+  label_title: Title
+  label_description: Description
+  label_media: Image
+
+filter:
+  label_title: Title
+  label_description: Description
+  label_media: Image

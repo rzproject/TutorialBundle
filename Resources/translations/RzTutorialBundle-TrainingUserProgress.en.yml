@@ -1,0 +1,32 @@
+rz_tutorial_progress: Tutorial Progress
+
+
+breadcrumb:
+  link_training_user_progress_list: Training User Progress
+
+list:
+  label_training_title: Training
+  label_user_username: User
+  label_total: Total Tutorials
+  label_current: Total Finished
+  label_tutorial_title: Tutorial
+  label_accomplished: Is Session Finished
+  label__action: Action
+
+filter:
+  list.label_training_title: Training
+  list.label_user_username: User
+  label_total: Total Tutorials
+  label_current: Total Finished
+  label_tutorial_title: Tutorial
+  label_accomplished: Is Session Finished
+
+show:
+  label_training_title: Training
+  label_user_username: User
+  label_total: Total Tutorials
+  label_current: Total Finished
+  label_tutorial_title: Tutorial
+  label_accomplished: Is Session Finished
+  label_created_at: Created Date
+  label_updated_at: Last Access Date

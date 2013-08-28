@@ -1,0 +1,6 @@
+rz_tutorial_training: Trainings
+
+form:
+  label_tutorial_item: Tutorial Item (Screen)
+  label_enabled: Enabled
+  label_position: Position

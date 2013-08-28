@@ -1,0 +1,225 @@
+
+#tutorialwizard .hero,
+#tutorial-finish {
+    background-color: #fff;
+    padding: 14px 20px 14px 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#tutorialwizard .hero h3,
+#tutorial-finish h3{
+    color: #87a46e !important;
+}
+
+.lesson h3 {
+    color: #87a46e !important;
+}
+
+.pager.wizard {
+    margin-bottom: 10px;
+}
+
+.progress-striped .bar {
+    background-color: #5bb75b;
+}
+
+/*.pager.wizard li{*/
+/*position: absolute;*/
+/*top: -90px;*/
+/*}*/
+
+/*.pager.wizard li.next{*/
+/*right: 20px;*/
+/*}*/
+
+/*.pager.wizard li.previous{*/
+/*left: 20px;*/
+/*}*/
+
+.pager li > a,
+.pager li > span {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#tutorialwizard .pager {
+    position: absolute;
+    top: 50%;
+    width: 943px;
+    left: 0px;
+    margin: 0px 20px;
+    z-index: 9999 !important;
+}
+
+.tabbable .tab-content .thumbnail {
+    padding: 15px;
+    background-color: #fff !important;
+}
+
+ul.thumbnails  a.thumbnail {
+    cursor: default;
+}
+
+.wizard-text-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 952px !important;
+    min-height: 582px !important;
+    position: relative !important;
+    font-family: 'Lato', sans-serif !important;
+    color: #999999 !important;
+}
+
+.wizard-text-container > .text-container {
+     width: 782px;
+     min-height: 560px;
+     padding: 10px;
+     background-color: #fff;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     border-radius: 4px;
+     box-shadow: 0px 3px 8px 0px #e7e7e7;
+     border: 10px solid #e7e7e7;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     vertical-align:middle;
+ }
+
+.wizard-text-container > .text-container > .text-content,
+.wizard-text-container > .text-container > .text-content-instructions{
+    margin: 20px;
+}
+
+.wizard-text-container > .text-container > .text-content h1,
+.wizard-text-container > .text-container > .text-content h2,
+.wizard-text-container > .text-container > .text-content h3,
+.wizard-text-container > .text-container > .text-content h4,
+.wizard-text-container > .text-container > .text-content h5,
+.wizard-text-container > .text-container > .text-content h6,
+.wizard-text-container > .text-container > .text-content-instructions h1,
+.wizard-text-container > .text-container > .text-content-instructions h2,
+.wizard-text-container > .text-container > .text-content-instructions h3,
+.wizard-text-container > .text-container > .text-content-instructions h4,
+.wizard-text-container > .text-container > .text-content-instructions h5,
+.wizard-text-container > .text-container > .text-content-instructions h6{
+    color: #87a46e !important;
+}
+
+.wizard-image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 952px !important;
+    height: 582px !important;
+    position: relative !important;
+}
+
+.img-polaroid {
+    padding: 10px;
+    background-color: #333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 8px 0px #e7e7e7;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align:middle;
+    z-index: 99990;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail div.description{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    top:0px; /* position will be on bottom */
+    left:0px;
+    width:100%;
+    /* styling bellow */
+    background-color:black;
+    font-size:15px;
+    color:white;
+    opacity:0.6; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    overflow: hidden;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutorial_link, .tutorial_link_prevent {
+    position: absolute;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid red;
+    height: 14px;
+    z-index: 99999 !important;
+}
+
+.tutorial_form {
+    position: absolute;
+    border: 0px solid #000;
+    font-family: arial !important;
+    font-size: 11px !important;
+    line-height: 11px !important;
+    border: none !important;
+    background-color: transparent !important;
+    padding-bottom: 0px;
+    box-shadow: none !important;
+    margin-bottom: 0px;
+}
+
+.tutorial_msg {
+    position: absolute;
+    width: 225px;
+    height: auto;
+    bottom: 13px;
+    right: 80px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif !important;
+    border: 5px solid;
+    border-color: #8fb450 !important;
+    padding: 10px;
+    background-color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+}
+
+.tutorial_msg .widget-title {
+color: #87a46e !important;
+}
+
+.tutorial_msg .widget-content {
+color: #333 !important;
+    font-size: 11px !important;
+}
+
+#tutorialwizard ul.thumbnails > li.span12 {
+    margin-bottom: 0px !important;
+}
+
+#tutorialwizard ul.thumbnails {
+    margin-bottom: 0px !important;
+}
+
+
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #fff !important;
+    background-color: #fff;
+    cursor: default;
+}

@@ -1,0 +1,38 @@
+rz_tutorial: Tutorials
+rz_tutorial_training: Trainings
+
+list:
+  label_title: Tutorial Title
+
+breadcrumb:
+  link_tutorial_list: Tutorial
+
+form:
+  label_category: Category
+  label_title: Title
+  label_description: Description
+  label_tutorial_has_items: Tutorial Steps
+  label_intro_content: Introduction
+  label_content: Content
+  label_finish_content: Thank You Message
+  label_tutorial_item: Tutorial Item (Screen
+  label_enabled: Enabled
+  label_position: Position
+
+show:
+  label_category: Category
+  label_title: Title
+  label_description: Description
+  label_tutorial_has_items: Tutorial Steps
+  label_intro_content: Introduction
+  label_content: Content
+  label_finish_content: Thank You Message
+
+filter:
+  label_category: Category
+  label_title: Title
+  label_description: Description
+  label_tutorial_has_items: Tutorial Steps
+  label_intro_content: Introduction
+  label_content: Content
+  label_finish_content: Thank You Message
