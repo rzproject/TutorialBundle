@@ -17,13 +17,12 @@ use Doctrine\ORM\Query;
 class TutorialItemManager extends ModelTutorialItemManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {

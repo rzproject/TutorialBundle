@@ -30,7 +30,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $content
+     * {@inheritdoc}
      */
     public function setContent ($content)
     {
@@ -38,7 +38,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getContent ()
     {
@@ -46,7 +46,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $createdAt
+     * {@inheritdoc}
      */
     public function setCreatedAt ($createdAt)
     {
@@ -54,7 +54,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getCreatedAt ()
     {
@@ -62,7 +62,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $description
+     * {@inheritdoc}
      */
     public function setDescription ($description)
     {
@@ -70,7 +70,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getDescription ()
     {
@@ -78,7 +78,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $isPublished
+     * {@inheritdoc}
      */
     public function setIsPublished ($isPublished = false)
     {
@@ -86,7 +86,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getIsPublished ()
     {
@@ -94,7 +94,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $publishEnd
+     * {@inheritdoc}
      */
     public function setPublishEnd ($publishEnd)
     {
@@ -102,7 +102,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getPublishEnd ()
     {
@@ -110,7 +110,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $publishStart
+     * {@inheritdoc}
      */
     public function setPublishStart ($publishStart)
     {
@@ -118,7 +118,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getPublishStart ()
     {
@@ -126,7 +126,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $slug
+     * {@inheritdoc}
      */
     public function setSlug ($slug)
     {
@@ -134,7 +134,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getSlug ()
     {
@@ -142,7 +142,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $title
+     * {@inheritdoc}
      */
     public function setTitle ($title)
     {
@@ -150,7 +150,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTitle ()
     {
@@ -158,7 +158,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @param mixed $updatedAt
+     * {@inheritdoc}
      */
     public function setUpdatedAt ($updatedAt)
     {
@@ -166,7 +166,7 @@ class Training implements TrainingInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUpdatedAt ()
     {

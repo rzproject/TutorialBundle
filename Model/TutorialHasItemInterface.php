@@ -5,55 +5,47 @@ namespace Rz\TutorialBundle\Model;
 interface TutorialHasItemInterface
 {
     /**
-     * @param boolean $enabled
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setEnabled($enabled);
 
     /**
-     * @return boolean
+     * {@inheritdoc}
      */
     public function getEnabled();
 
     /**
-     * @param TutorialInterface $tutorial
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setTutorial(TutorialInterface $tutorial = null);
 
     /**
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function getTutorial();
 
     /**
-     * @param TutorialItemInterface $tutorialItem
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setTutorialItem(TutorialItemInterface $tutorialItem = null);
 
     /**
-     * @return TutorialItemInterface
+     * {@inheritdoc}
      */
     public function getTutorialItem();
 
     /**
-     * @param int $position
-     *
-     * @return int
+     * {@inheritdoc}
      */
     public function setPosition($position);
 
     /**
-     * @return int
+     * {@inheritdoc}
      */
     public function getPosition();
 
     /**
-     * @return void
+     * {@inheritdoc}
      */
     public function __toString();
 }

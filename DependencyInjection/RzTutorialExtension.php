@@ -140,16 +140,6 @@ class RzTutorialExtension extends Extension
     {
         $collector = DoctrineCollector::getInstance();
 
-        $collector->addAssociation($config['class']['tutorial_item'], 'mapOneToMany', array(
-            'fieldName'     => 'tutorialHasItems',
-            'targetEntity'  => $config['class']['tutorial_has_item'],
-            'cascade'       => array(
-                'persist',
-            ),
-            'mappedBy'      => 'tutorial_item',
-            'orphanRemoval' => false,
-        ));
-
         $collector->addAssociation($config['class']['tutorial_item'], 'mapManyToOne', array(
             'fieldName'     => 'media',
             'targetEntity'  => $config['class']['media'],
@@ -167,6 +157,17 @@ class RzTutorialExtension extends Extension
             'orphanRemoval' => false,
             'default' => null,
         ));
+
+        $collector->addAssociation($config['class']['tutorial_item'], 'mapOneToMany', array(
+            'fieldName'     => 'tutorialHasItems',
+            'targetEntity'  => $config['class']['tutorial_has_item'],
+            'cascade'       => array(
+                'persist',
+            ),
+            'mappedBy'      => 'tutorial_item',
+            'orphanRemoval' => false,
+        ));
+
 
         $collector->addAssociation($config['class']['tutorial_has_item'], 'mapManyToOne', array(
             'fieldName'     => 'tutorial',

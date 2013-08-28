@@ -20,13 +20,12 @@ use Pagerfanta\Adapter\DoctrineORMAdapter;
 class TrainingManager extends ModelTrainingManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {
@@ -69,18 +68,7 @@ class TrainingManager extends ModelTrainingManager
     }
 
     /**
-     * Retrieve posts, based on the criteria, a page at a time.
-     * Valid criteria are:
-     *    enabled - boolean
-     *    date - query
-     *    tag - string
-     *    author - 'NULL', 'NOT NULL', id, array of ids
-     *
-     * @param array   $criteria
-     * @param integer $page
-     * @param integer $maxPerPage
-     *
-     * @return \Sonata\AdminBundle\Datagrid\Pager
+     * {@inheritdoc}
      */
     public function getPager(array $criteria, $page = 0, $maxPerPage = 10)
     {
@@ -98,6 +86,9 @@ class TrainingManager extends ModelTrainingManager
         return $pager;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getCustomPager(array $criteria, $page = 0, $maxPerPage = 10) {
         $query = $this->em->createQuery(sprintf('
                                     SELECT t, uht FROM %s t
@@ -113,6 +104,9 @@ class TrainingManager extends ModelTrainingManager
         }
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getTrainingGroupByCategory()
     {
         $query = $this->em->getRepository($this->class)
@@ -123,9 +117,7 @@ class TrainingManager extends ModelTrainingManager
     }
 
     /**
-     * @param $slug
-     *
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function findOneBySlug($slug)
     {

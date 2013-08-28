@@ -10,16 +10,25 @@ use Rz\TutorialBundle\Model\TutorialItem as BaseTutorialItem;
  */
 class TutorialItem extends BaseTutorialItem
 {
+    /**
+     * {@inheritdoc}
+     */
     public function __toString() {
         return $this->getTitle() ?: 'n/a';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function prePersist()
     {
         $this->setCreatedAt(new \DateTime);
         $this->setUpdatedAt(new \DateTime);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function preUpdate()
     {
         $this->setUpdatedAt(new \DateTime);

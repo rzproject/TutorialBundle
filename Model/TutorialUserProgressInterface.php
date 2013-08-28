@@ -6,62 +6,62 @@ namespace Rz\TutorialBundle\Model;
 interface TutorialUserProgressInterface
 {
     /**
-     * @param mixed $accomplished
+     * {@inheritdoc}
      */
     public function setAccomplished ($accomplished);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getAccomplished ();
 
     /**
-     * @param mixed $createdAt
+     * {@inheritdoc}
      */
     public function setCreatedAt ($createdAt);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getCreatedAt ();
 
     /**
-     * @param mixed $elapseTime
+     * {@inheritdoc}
      */
     public function setElapseTime ($elapseTime);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getElapseTime ();
 
     /**
-     * @param mixed $ended
+     * {@inheritdoc}
      */
     public function setEnded ($ended);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getEnded ();
 
     /**
-     * @param mixed $started
+     * {@inheritdoc}
      */
     public function setStarted ($started);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getStarted ();
 
     /**
-     * @param mixed $updatedAt
+     * {@inheritdoc}
      */
     public function setUpdatedAt ($updatedAt);
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUpdatedAt ();
 }

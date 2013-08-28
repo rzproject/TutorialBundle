@@ -17,13 +17,12 @@ use Doctrine\ORM\Query;
 class UserHasTrainingManager extends ModelUserHasTrainingManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {
@@ -65,7 +64,9 @@ class UserHasTrainingManager extends ModelUserHasTrainingManager
         $this->em->flush();
     }
 
-
+    /**
+     * {@inheritdoc}
+     */
     public function getPager(array $criteria, $page = 0, $maxPerPage = 10)
     {
         $query = $this->em->getRepository($this->class)
@@ -105,6 +106,9 @@ class UserHasTrainingManager extends ModelUserHasTrainingManager
         }
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function hasTrainingAccess($user, $training)
     {
         $query = $this->em->createQuery(sprintf('

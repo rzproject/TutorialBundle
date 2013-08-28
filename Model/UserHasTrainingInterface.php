@@ -5,55 +5,47 @@ namespace Rz\TutorialBundle\Model;
 interface UserHasTrainingInterface
 {
     /**
-     * @param boolean $isActive
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setIsActive($isActive);
 
     /**
-     * @return boolean
+     * {@inheritdoc}
      */
     public function getIsActive();
 
     /**
-     * @param \Sonata\UserBundle\Model\UserInterface $user
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setUser(\Sonata\UserBundle\Model\UserInterface $user = null);
 
     /**
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function getUser();
 
     /**
-     * @param TrainingInterface $training
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setTraining(TrainingInterface $training = null);
 
     /**
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function getTraining();
 
     /**
-     * @param int $position
-     *
-     * @return int
+     * {@inheritdoc}
      */
     public function setPosition($position);
 
     /**
-     * @return int
+     * {@inheritdoc}
      */
     public function getPosition();
 
     /**
-     * @return void
+     * {@inheritdoc}
      */
     public function __toString();
 }

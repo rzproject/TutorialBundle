@@ -11,13 +11,12 @@ use Doctrine\ORM\Query;
 class TrainingUserProgressManager extends ModelTrainingUserProgressManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {
@@ -59,6 +58,9 @@ class TrainingUserProgressManager extends ModelTrainingUserProgressManager
         $this->em->flush();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function createTrainingProgress($training, $user) {
         $progress = $this->findOneBy(array('training'=>$training, 'user'=>$user));
 
@@ -74,6 +76,9 @@ class TrainingUserProgressManager extends ModelTrainingUserProgressManager
         return $progress;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function updateTrainingProgress($progress, $count) {
         if($progress) {
             $progress->setCurrent($count);

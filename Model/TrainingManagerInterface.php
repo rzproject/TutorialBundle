@@ -5,50 +5,32 @@ namespace Rz\TutorialBundle\Model;
 interface TrainingManagerInterface
 {
     /**
-     * Creates an empty tutorial instance
-     *
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function create();
 
     /**
-     * Deletes a tutorial
-     *
-     * @param TrainingInterface $training
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function delete(TrainingInterface $training);
 
     /**
-     * Finds many tutorial by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function findBy(array $criteria);
 
     /**
-     * Finds one tutorial by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function findOneBy(array $criteria);
 
     /**
-     * Returns the tutorial's fully qualified class name
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getClass();
 
     /**
-     * @param TrainingInterface $training
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function save(TrainingInterface $training);
 }

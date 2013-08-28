@@ -25,7 +25,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $training
+     * {@inheritdoc}
      */
     public function setTraining ($training)
     {
@@ -33,7 +33,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTraining ()
     {
@@ -41,7 +41,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $user
+     * {@inheritdoc}
      */
     public function setUser ($user)
     {
@@ -49,7 +49,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUser ()
     {
@@ -57,7 +57,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $accomplished
+     * {@inheritdoc}
      */
     public function setAccomplished ($accomplished)
     {
@@ -65,7 +65,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getAccomplished ()
     {
@@ -73,7 +73,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $createdAt
+     * {@inheritdoc}
      */
     public function setCreatedAt ($createdAt)
     {
@@ -81,7 +81,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getCreatedAt ()
     {
@@ -89,7 +89,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $current
+     * {@inheritdoc}
      */
     public function setCurrent ($current)
     {
@@ -97,7 +97,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getCurrent ()
     {
@@ -105,7 +105,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $total
+     * {@inheritdoc}
      */
     public function setTotal ($total)
     {
@@ -113,7 +113,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTotal ()
     {
@@ -121,7 +121,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @param mixed $updatedAt
+     * {@inheritdoc}
      */
     public function setUpdatedAt ($updatedAt)
     {
@@ -129,7 +129,7 @@ abstract class TrainingUserProgress implements TrainingUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUpdatedAt ()
     {

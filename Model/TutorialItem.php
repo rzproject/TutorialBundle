@@ -17,7 +17,7 @@ class TutorialItem implements TutorialItemInterface
     protected $createdAt;
 
     /**
-     * @param mixed $description
+     * {@inheritdoc}
      */
     public function setDescription ($description)
     {
@@ -25,7 +25,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getDescription ()
     {
@@ -33,7 +33,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @param mixed $link
+     * {@inheritdoc}
      */
     public function setContent ($link)
     {
@@ -41,7 +41,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getContent ()
     {
@@ -49,7 +49,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @param mixed $linkCoordinates
+     * {@inheritdoc}
      */
     public function setLinkCoordinates ($linkCoordinates)
     {
@@ -57,7 +57,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getLinkCoordinates ()
     {
@@ -65,7 +65,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @param mixed $title
+     * {@inheritdoc}
      */
     public function setTitle ($title)
     {
@@ -73,7 +73,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTitle ()
     {
@@ -97,9 +97,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * Set media
-     *
-     * @param \Sonata\MediaBundle\Model\Media $media
+     * {@inheritdoc}
      */
     public function setMedia(\Sonata\MediaBundle\Model\Media $media = null)
     {
@@ -107,9 +105,7 @@ class TutorialItem implements TutorialItemInterface
     }
 
     /**
-     * Get tutorial
-     *
-     * @return \Sonata\MediaBundle\Model\Media
+     * {@inheritdoc}
      */
     public function getMedia()
     {

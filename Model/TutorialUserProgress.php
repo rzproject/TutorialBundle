@@ -15,7 +15,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     protected $updatedAt;
 
     /**
-     * @param mixed $trainingUserProgress
+     * {@inheritdoc}
      */
     public function setTrainingUserProgress ($trainingUserProgress)
     {
@@ -23,7 +23,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTrainingUserProgress ()
     {
@@ -31,7 +31,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $tutorial
+     * {@inheritdoc}
      */
     public function setTutorial ($tutorial)
     {
@@ -39,7 +39,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getTutorial ()
     {
@@ -47,7 +47,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $accomplished
+     * {@inheritdoc}
      */
     public function setAccomplished ($accomplished)
     {
@@ -55,7 +55,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getAccomplished ()
     {
@@ -63,7 +63,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $createdAt
+     * {@inheritdoc}
      */
     public function setCreatedAt ($createdAt)
     {
@@ -71,7 +71,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getCreatedAt ()
     {
@@ -79,7 +79,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $elapseTime
+     * {@inheritdoc}
      */
     public function setElapseTime ($elapseTime)
     {
@@ -87,7 +87,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getElapseTime ()
     {
@@ -95,7 +95,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $ended
+     * {@inheritdoc}
      */
     public function setEnded ($ended)
     {
@@ -103,7 +103,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getEnded ()
     {
@@ -111,7 +111,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $started
+     * {@inheritdoc}
      */
     public function setStarted ($started)
     {
@@ -119,7 +119,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getStarted ()
     {
@@ -127,7 +127,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @param mixed $updatedAt
+     * {@inheritdoc}
      */
     public function setUpdatedAt ($updatedAt)
     {
@@ -135,7 +135,7 @@ abstract class TutorialUserProgress implements TutorialUserProgressInterface
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUpdatedAt ()
     {

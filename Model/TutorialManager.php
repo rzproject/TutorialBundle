@@ -5,14 +5,12 @@ namespace Rz\TutorialBundle\Model;
 abstract class TutorialManager implements TutorialManagerInterface
 {
     /**
-     * @var string
+     * {@inheritdoc}
      */
     protected $class;
 
     /**
-     * Creates an empty media instance
-     *
-     * @return Tutorial
+     * {@inheritdoc}
      */
     public function create()
     {
@@ -22,11 +20,7 @@ abstract class TutorialManager implements TutorialManagerInterface
     }
 
     /**
-     * Finds one media by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return Tutorial
+     * {@inheritdoc}
      */
     public function findOneBy(array $criteria)
     {
@@ -34,11 +28,7 @@ abstract class TutorialManager implements TutorialManagerInterface
     }
 
     /**
-     * Finds one media by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return Tutorial
+     * {@inheritdoc}
      */
     public function findBy(array $criteria)
     {
@@ -46,7 +36,7 @@ abstract class TutorialManager implements TutorialManagerInterface
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getClass()
     {

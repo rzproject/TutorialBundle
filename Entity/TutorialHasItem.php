@@ -10,12 +10,18 @@ use Rz\TutorialBundle\Model\TutorialHasItem as ModelTutorialHasItem;
  */
 class TutorialHasItem extends ModelTutorialHasItem
 {
+    /**
+     * {@inheritdoc}
+     */
     public function prePersist()
     {
         $this->setCreatedAt(new \DateTime);
         $this->setUpdatedAt(new \DateTime);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function preUpdate()
     {
         $this->setUpdatedAt(new \DateTime);

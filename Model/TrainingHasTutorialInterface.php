@@ -5,55 +5,47 @@ namespace Rz\TutorialBundle\Model;
 interface TrainingHasTutorialInterface
 {
     /**
-     * @param boolean $enabled
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setEnabled($enabled);
 
     /**
-     * @return boolean
+     * {@inheritdoc}
      */
     public function getEnabled();
 
     /**
-     * @param TutorialInterface $tutorial
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setTutorial(TutorialInterface $tutorial = null);
 
     /**
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function getTutorial();
 
     /**
-     * @param TrainingInterface $training
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function setTraining(TrainingInterface $training = null);
 
     /**
-     * @return TrainingInterface
+     * {@inheritdoc}
      */
     public function getTraining();
 
     /**
-     * @param int $position
-     *
-     * @return int
+     * {@inheritdoc}
      */
     public function setPosition($position);
 
     /**
-     * @return int
+     * {@inheritdoc}
      */
     public function getPosition();
 
     /**
-     * @return void
+     * {@inheritdoc}
      */
     public function __toString();
 }

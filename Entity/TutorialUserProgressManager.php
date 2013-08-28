@@ -12,13 +12,12 @@ use Doctrine\ORM\NoResultException;
 class TutorialUserProgressManager extends ModelTutorialUserProgressManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {

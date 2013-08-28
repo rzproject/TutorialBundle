@@ -10,12 +10,18 @@ use Rz\TutorialBundle\Model\UserHasTraining as ModelUserHasTraining;
  */
 class UserHasTraining extends ModelUserHasTraining
 {
+    /**
+     * {@inheritdoc}
+     */
     public function prePersist()
     {
         $this->setCreatedAt(new \DateTime);
         $this->setUpdatedAt(new \DateTime);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function preUpdate()
     {
         $this->setUpdatedAt(new \DateTime);

@@ -5,50 +5,32 @@ namespace Rz\TutorialBundle\Model;
 interface TutorialManagerInterface
 {
     /**
-     * Creates an empty tutorial instance
-     *
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function create();
 
     /**
-     * Deletes a tutorial
-     *
-     * @param TutorialInterface $tutorial
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function delete(TutorialInterface $tutorial);
 
     /**
-     * Finds many tutorial by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function findBy(array $criteria);
 
     /**
-     * Finds one tutorial by the given criteria
-     *
-     * @param array $criteria
-     *
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function findOneBy(array $criteria);
 
     /**
-     * Returns the tutorial's fully qualified class name
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getClass();
 
     /**
-     * @param TutorialInterface $tutorial
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function save(TutorialInterface $tutorial);
 }

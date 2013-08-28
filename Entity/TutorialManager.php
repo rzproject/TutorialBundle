@@ -17,13 +17,12 @@ use Doctrine\ORM\Query;
 class TutorialManager extends ModelTutorialManager
 {
     /**
-     * @var \Doctrine\ORM\EntityManager
+     * {@inheritdoc}
      */
     protected $em;
 
     /**
-     * @param \Doctrine\ORM\EntityManager $em
-     * @param string                      $class
+     * {@inheritdoc}
      */
     public function __construct(EntityManager $em, $class)
     {
@@ -66,18 +65,7 @@ class TutorialManager extends ModelTutorialManager
     }
 
     /**
-     * Retrieve posts, based on the criteria, a page at a time.
-     * Valid criteria are:
-     *    enabled - boolean
-     *    date - query
-     *    tag - string
-     *    author - 'NULL', 'NOT NULL', id, array of ids
-     *
-     * @param array   $criteria
-     * @param integer $page
-     * @param integer $maxPerPage
-     *
-     * @return \Sonata\AdminBundle\Datagrid\Pager
+     * {@inheritdoc}
      */
     public function getPager(array $criteria, $page = 0, $maxPerPage = 10)
     {
@@ -95,6 +83,9 @@ class TutorialManager extends ModelTutorialManager
         return $pager;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getTutorialGroupByCategory()
     {
         $query = $this->em->getRepository($this->class)
@@ -105,9 +96,7 @@ class TutorialManager extends ModelTutorialManager
     }
 
     /**
-     * @param $slug
-     *
-     * @return TutorialInterface
+     * {@inheritdoc}
      */
     public function findOneBySlug($slug)
     {
